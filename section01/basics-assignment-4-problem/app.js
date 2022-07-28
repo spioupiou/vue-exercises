@@ -12,6 +12,14 @@ const app = Vue.createApp({
       this.isHidden = !this.isHidden;
       this.isVisible = !this.isVisible;
     }
+  },
+  computed : {
+    switchClass() {
+      return {
+        user1: this.classInput === 'user1', 
+        user2: this.classInput === 'user2',
+      }
+    }
   }
 });
 
